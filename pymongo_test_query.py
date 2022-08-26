@@ -1,6 +1,7 @@
 # importing module
 
 from pymongo import MongoClient
+import ssl
 
 import pprint
 
