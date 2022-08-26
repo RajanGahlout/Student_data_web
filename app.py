@@ -1,4 +1,13 @@
+import collections
+from urllib.parse import quote_plus
+import ssl
 from flask import Flask, render_template
+from flask_pymongo import PyMongo, pymongo
+from pymongo import MongoClient
+
+
+
+
 app = Flask(__name__)
 
 @app.route('/')
@@ -17,4 +26,8 @@ def Student():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=8000)
+   app.run(debug=True, port=8000)
+
+
+
+
