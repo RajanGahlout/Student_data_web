@@ -42,3 +42,4 @@ employees.insert_one(employee)
 # Fetching data
 
 pprint.pprint(employees.find_one())
+
