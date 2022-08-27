@@ -33,12 +33,11 @@
 
   </div>
 </header>
-
 <body>
 
   <button
     class="inline-flex items-center bg-gray-100 border-1 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
-    <a href="view_student_details.html">View Student Details</a>
+    <a href="{{ url_for('view_student_details')}}">View Student Details</a>
   </button>
 </body><br>
 </body>
@@ -49,7 +48,7 @@
 
   <button
     class="inline-flex items-center bg-gray-100 border-1 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
-    <a href="modify_student_details.html">modify Student Details</a>
+    <a href="{{ url_for('modify_student_details')}}">modify Student Details</a>
   </button> </body><br>
 </body>
 
@@ -58,7 +57,7 @@
 
   <button
     class="inline-flex items-center bg-gray-100 border-1 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
-    <a href="delete_student_details.html">delete Student Details</a>
+    <a href="{{ url_for('delete_student_details')}}">delete Student Details</a>
   </button>
 </body>
 

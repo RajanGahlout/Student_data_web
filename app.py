@@ -21,7 +21,20 @@ def Admin():
 
 @app.route('/Student')
 def Student():
-    return render_template('Student.html')    
+    return render_template('Student.html')   
+
+@app.route('/modify_student_details')
+def modify_student_details():
+ 
+    return render_template('modify_student_details.html')
+
+@app.route('/view_student_details')
+def view_student_details():
+    return render_template('view_student_details.html')
+
+@app.route('/delete_student_details')
+def delete_student_details():
+    return render_template('delete_student_details.html')      
 
 
 
