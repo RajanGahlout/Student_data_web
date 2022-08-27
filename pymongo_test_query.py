@@ -22,9 +22,12 @@ db = client.javatpoint
 
 employee = {"id": "100",
 
-            "name": "Arun",
+            "stname": "Ashu",
 
-            "profession": "Software Engineer",
+            "age": "18",
+            "course": "btech",
+
+            "email": "abc@gmail.com",
 
             }
 
