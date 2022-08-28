@@ -37,7 +37,7 @@ employees = db.employees
 
 # Inserting data
 
-employees.insert_one(employee)
+#employees.insert_one(employee)
 
 # Fetching data
 

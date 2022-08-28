@@ -62,10 +62,8 @@ def post_student_details():
     all_todos = employees.find_one()
     return render_template('post_student_details.html', todos=all_todos)
     
-@app.post('/<id>/delete/')
-def delete(id):
-    employees.delete_one({"_id": ObjectId(id)})
-    return redirect(url_for('index'))
+
+
 
 if __name__ == "__main__":
    app.run(debug=True, port=8000)

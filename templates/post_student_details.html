@@ -1,54 +1,64 @@
 <!doctype html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body>
+  
   <h1 class="text-3xl font-bold ">
     Welcome to the Admission Portal!
   </h1>
   <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-    <button class="inline-flex items-center bg-gray-100 border-1 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
-     <a href="{{ url_for('Home')}}">Home
-     <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" class="w-1 h-1 ml-1" viewBox="0 0 24 24">
-          
-     </svg>      
-   </nav>
+    <button
+      class="inline-flex items-center bg-gray-100 border-1 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
+      <a href="{{ url_for('Home')}}">Home
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+          class="w-1 h-1 ml-1" viewBox="0 0 24 24">
+
+        </svg>
+  </nav>
 </body>
 
 <header class="text-gray-600 body-font">
-    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-      <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
-          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-        </svg>
-        <span class="ml-3 text-xl">ABC Institute </span>
-      </a>
+  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+    <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+        stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
+        viewBox="0 0 24 24">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+      </svg>
+      <span class="ml-3 text-xl">ABC Institute </span>
+    </a>
 
-    </div>
-  </header>
+  </div>
+</header>
 
 <body>
-  Welcome to the Student page 
+  Welcome to the Student page
 
 </body>
-    <hr>
-    <div class="content">
-    <form method="post">
-        <p>
-            <b><label for="content">Todo content</label></b>
-        </p>
-        <p>
-            <input type="text" name="content"
-                placeholder=" Content"></input>
-        </p>
+<hr>
+<div class="content">
+  <form method="post">
+    <p>
+      <b><label for="content">Student Name</label></b>
+    </p>
+    <p>
+      <input type="text" name="content" placeholder="Please enter the name"></input>
+    </p>
 
-        <p>
-            <b><label for="degree">Degree</label></b>
-        </p>
-        
+    <p>
+      <b><label for="degree">Degree</label></b>
+    </p>
+    <p>
+      <input type="text" name="degree" placeholder="Please enter the Degree name"></input>
+    </p>
+
+    <!--
         <p>
             <input id="degree-0" name="degree" required type="radio" value="Important">
             <label for="degree-0">Important</label>
@@ -56,16 +66,39 @@
         <p>
             <input id="degree-1" name="degree" required type="radio" value="Unimportant">
             <label for="degree-1">Unimportant</label>
-        </p> 
-        <button type="submit">Submit</button>
-    </form>
-    <hr>
-    {% for todo in todos %}
-        <div class="todo">
-            <p>{{ todo['content'] }} <i>({{ todo['degree']}})</i></p>
-        </div>
-    {% endfor %}
+        </p> -->
+        <style> 
+          input[type=button], input[type=submit], input[type=reset] {
+            background-color: #04AA6D;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+          }
+          </style>
+          </head>
+          <body>
+        
+          <input type="submit" value="Submit">
+          
+          
+          
+    <!-- <button type="submit">Submit</button> -->
+  </body>
+  </form>
+  
+  <hr>
+  {% for todo in todos %}
+  <div class="todo">
+    <p>{{ todo['content'] }} <i>{{ todo['degree']}}</i></p>
+  </div>
+  {% endfor %}
 
-    </div>
+</div>
+
+
 </body>
+
 </html>
