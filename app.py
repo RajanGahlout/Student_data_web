@@ -41,7 +41,7 @@ def delete_student_details():
 
 
 
-client = MongoClient("mongodb+srv://Rajangahlout:Capg12345@cluster0.p6ksttg.mongodb.net/?retryWrites=true&w=majority")
+client = MongoClient("mongodb+srv://Rajangahlout:Capg12345@cluster0.p6ksttg.mongodb.net/?retryWrites=true&w=majority", connect=False)
 
 
 db = client.javatpoint
@@ -57,12 +57,14 @@ def post_student_details():
         content = request.form['content']
         degree = request.form['degree']
         employees.insert_one({'content': content, 'degree': degree})
-        return redirect(url_for('post_student_details'))
+        return redirect(url_for('thanks_submittion'))
 
-    all_todos = employees.find_one()
-    return render_template('post_student_details.html', todos=all_todos)
+   # all_todos = employees.find_one()
+    return render_template('post_student_details.html')
     
-
+@app.route('/thanks_submittion')
+def thanks_submittion():
+    return render_template('thanks_submittion.html') 
 
 
 if __name__ == "__main__":
